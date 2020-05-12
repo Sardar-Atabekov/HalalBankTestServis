@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.add {
+  color: #fff !important;
+  background: #04932c !important;
+  padding: 5px 25px !important;
+  font-family: Avenir Next;
+  padding-top: 10px;
+  border: 1px solid #e4e4e4;
+  height: 40px;
+  border-radius: .625em;
+}
+
+label {
+  cursor: pointer;
+  /* Style as you please, it will become the visible UI component. */
+}
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --hoverColor: #0094ff;
+  --borderColor: #dedede;
+  --mainColor: #32b482;
+  --mainBackground: #e5e5e5;
+  --error: red;
+}
+
+
+.btn-secondary:hover {
+  background-color: var(--mainColor);
+  border-color: #545b62;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle {
+  background-color: var(--mainColor);
+  border-color: #545b62;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+  color: #fff;
+  background-color: var(--mainColor);
+  border-color: #545b62;
+  box-shadow: 0 2px 0 rgba(90, 97, 105, .11), 0 4px 8px rgba(90, 97, 105, .12), 0 10px 10px rgba(90, 97, 105, .06), 0 7px 70px rgba(90, 97, 105, .1);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--mainColor);
+  border-color: #4e555b;
+}
+
+/* .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 2px 0 rgba(90, 97, 105, .11), 0 4px 8px rgba(90, 97, 105, .12), 0 10px 10px rgba(90, 97, 105, .06), 0 7px 70px rgba(90, 97, 105, .1);
+} */
+
+input:required:invalid:not(:placeholder-shown),
+input:required:valid:not(:placeholder-shown) {
+  background-image: url('./assets/icons/red.svg');
+  background-repeat: no-repeat;
+  background-position: 95%;
+  opacity: 1;
+  -webkit-transition: background-image -1s, background-position -1s, opacity .4s ease .4s;
+  transition: background-image -1s, background-position -1s, opacity .4s ease .4s;
+}
+
+input:required:valid:not(:placeholder-shown) {
+  background-image: url('./assets/icons/green.svg');
+}
+
+input {
+  box-shadow: none !important;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}

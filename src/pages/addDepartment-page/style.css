@@ -1,0 +1,136 @@
+.addUserContent {
+    background-color: #fff;
+    border: none;
+    border-radius: .625rem;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, .1),
+        0 0.9375rem 1.40625rem rgba(90, 97, 105, .1),
+        0 0.25rem 0.53125rem rgba(90, 97, 105, .12),
+        0 0.125rem 0.1875rem rgba(90, 97, 105, .1);
+    margin: 40px auto;
+    width: 704px;
+    position: relative;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+
+}
+
+.addUserContent .formBlock {
+
+    margin: 20px 1.5rem;
+}
+
+.addUserContent .form-row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+
+.addUserContent .form-row .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 1rem;
+    height: 66px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.addUserContent .form-row label {
+    margin-bottom: .5rem;
+}
+
+.adduser,
+.addmeal {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.addUserContent .form-control {
+    height: auto;
+    padding: .4375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #e1e5eb;
+    font-weight: 300;
+    will-change: border-color, box-shadow;
+    border-radius: .25rem;
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(.27, .01, .38, 1.06), border 250ms cubic-bezier(.27, .01, .38, 1.06);
+}
+
+.title-block {
+    margin-bottom: 1rem;
+}
+
+.addUserContent .form-title h6 {
+    margin: 0px;
+    font-weight: 400;
+    color: #3d5170;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.addUserContent .form-title .form-text {
+    margin: 0px;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.addUserContent .form-row .select,
+.addTable .select {
+    padding: .8em 1.75rem .8em .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-size: 8px 10px;
+    border: 1px solid #e1e5eb;
+    font-weight: 300;
+    font-size: .8125rem;
+    transition: box-shadow 250ms cubic-bezier(.27, .01, .38, 1.06), border 250ms cubic-bezier(.27, .01, .38, 1.06);
+    border-radius: .25rem;
+}
+
+
+.addUserContent .form {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+}
+
+.addUserContent .btn {
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: .5625rem 1rem;
+    font-size: .75rem;
+    line-height: 1.125;
+    border-radius: .25rem;
+    transition: all 250ms cubic-bezier(.27, .01, .38, 1.06);
+}
+
+.addUserContent .btnSumbit {
+    background: green;
+    color: white;
+    font-weight: 500;
+    font-size: .6875rem;
+    padding: 0 40px;
+    text-align: center;
+    width: 150px;
+    margin-top: 1.5em;
+    border-radius: .25rem;
+    height: 30px;
+}

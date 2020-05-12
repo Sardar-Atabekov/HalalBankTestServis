@@ -1,0 +1,39 @@
+.titleStyle {
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.05em;
+    color: #1D3446;
+}
+
+.line {
+    border-bottom: 8px solid var(--mainColor);
+    width: 40%;
+}
+
+.title-block {
+    max-height: 300px;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    .titleStyle {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .line {
+        border-bottom: 4px solid var(--mainColor);
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .titleStyle {
+        font-size: 33px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .titleStyle {
+        font-size: 26px;
+    }
+}
