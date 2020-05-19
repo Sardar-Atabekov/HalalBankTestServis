@@ -26,13 +26,48 @@ const Departments = () => {
     }
   };
 
-  const data = {
-    totalSum: 1000000,
-    totalSumMonth: 500000,
-    totalSumWeek: 250000,
-    totalSumToday: 0,
+  let reports = JSON.parse(localStorage.getItem("reports"));
+
+  const dataSUM = {
+    totalSum: reports.kgs,
+    totalSumMonth: reports.kgs,
+    totalSumWeek: reports.kgs,
+    totalSumToday: reports.kgs,
+  };
+  const dataKZT = {
+    totalSum: reports.kz,
+    totalSumMonth: reports.kz,
+    totalSumWeek: reports.kz,
+    totalSumToday: reports.kz,
+  };
+  const dataEUR = {
+    totalSum: reports.eur,
+    totalSumMonth: reports.eur,
+    totalSumWeek: reports.eur,
+    totalSumToday: reports.eur,
   };
 
+  const dataUSD = {
+    totalSum: reports.usd,
+    totalSumMonth: reports.usd,
+    totalSumWeek: reports.usd,
+    totalSumToday: reports.usd,
+  };
+
+  const data = {
+    totalSum: Math.round(
+      reports.usd * 77 + reports.eur * 83.2 + reports.kz * 0.18 + reports.kgs
+    ),
+    totalSumMonth: Math.round(
+      reports.usd * 77 + reports.eur * 83.2 + reports.kz * 0.18 + reports.kgs
+    ),
+    totalSumWeek: Math.round(
+      reports.usd * 77 + reports.eur * 83.2 + reports.kz * 0.18 + reports.kgs
+    ),
+    totalSumToday: Math.round(
+      reports.usd * 77 + reports.eur * 83.2 + reports.kz * 0.18 + reports.kgs
+    ),
+  };
   return (
     <div className="wrapper">
       <NavBar />
@@ -43,13 +78,13 @@ const Departments = () => {
             <Title>Общая</Title>
             <Total data={data} />
             <Title>Сом</Title>
-            <Total data={data} />
+            <Total data={dataSUM} />
             <Title>KZT</Title>
-            <Total data={data} currency="KZT" />
+            <Total data={dataKZT} currency="KZT" />
             <Title>EUR</Title>
-            <Total data={data} currency="EUR" />
+            <Total data={dataEUR} currency="EUR" />
             <Title>USD</Title>
-            <Total data={data} currency="USD" />
+            <Total data={dataUSD} currency="USD" />
           </div>
         ) : (
           <Loading />

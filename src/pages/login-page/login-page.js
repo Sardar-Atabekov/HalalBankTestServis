@@ -103,8 +103,16 @@ const LoginPage = () => {
         Card_Number: 1234,
       },
     ];
-
     localStorage.setItem("transaction", JSON.stringify(transaction));
+    localStorage.setItem(
+      "reports",
+      JSON.stringify({
+        kgs: 0,
+        usd: 0,
+        kz: 0,
+        eur: 0,
+      })
+    );
     setTimeout(() => (window.location.href = `/transactions/`), 500);
   };
 

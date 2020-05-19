@@ -27,18 +27,28 @@ const Users = () => {
       setLoading(true);
     }
   };
-  console.log(users);
 
   const endPayments = () => {
     let transaction = JSON.parse(localStorage.getItem("transaction"));
+    let reports = JSON.parse(localStorage.getItem("reports"));
     transaction = transaction.map((item) => {
       if (!item.completed) {
         item.completed = true;
+        if (item.Curr == "KGS") {
+          reports.kgs = reports.kgs + item.Amnt;
+        } else if (item.Curr == "USD") {
+          reports.usd = reports.usd + item.Amnt;
+        } else if (item.Curr == "KZT") {
+          reports.kz = reports.kz + item.Amnt;
+        } else if (item.Curr == "EUR") {
+          reports.eur = reports.eur + item.Amnt;
+        }
       }
+
       return item;
     });
     localStorage.setItem("transaction", JSON.stringify(transaction));
-    console.log(transaction);
+    localStorage.setItem("reports", JSON.stringify(reports));
     setTansactionData(transaction);
   };
   const deleteMessage = (id, name) => {
